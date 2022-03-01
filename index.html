@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vanilla Boilerplate</title>
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+    rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <style>
+        body {
+            background-color: #21173d;
+        }
+        #app {
+            display: none;
+        }
+
+        .main-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;    
+        }
+        .main-form input {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #success-message {
+            display: none;
+        }
+
+        #loading {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+   
+    <div class="container">
+        <div class="row" id="app">
+            <div class="col-md-6 offset-md-3">
+                <div class="main-form">
+                    <div class="form-element">
+                        <input id="ip_name" class="form-control" name="name" type="text" placeholder="Enter your NFT Name" />
+                    </div>
+                    <!-- input description -->
+                    <div class="form-element">
+                        <input id="ip_description" class="form-control" name="description" type="text" placeholder="Enter your NFT Description" />
+                    </div>
+                    <!-- input image file-->
+                    <div class="form-element">
+                        <input id="ip_image" class="form-control" name="image" type="file" placeholder="Enter your NFT Image" />
+                    </div>
+                    <!-- submit -->
+                    <div class="form-element">
+                        <button id="btn_submit" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+
+                </div>
+                <div id="loading">
+                    <!-- show md bootstrap loading sign -->
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                <div id="success-message">
+                    <div class="alert alert-success">
+                        <strong>Success!</strong> Your NFT has been created.
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- MDB -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
+    ></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
